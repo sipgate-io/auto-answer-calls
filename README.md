@@ -1,19 +1,16 @@
 # auto-answer-calls
 
-## Dependencies:
-The following packages must be installed:
-`sudo apt install python-dev gcc make gcc binutils build-essential`.  Also, to detect an audio resource, the following must be installed: `sudo apt-get install libasound2-dev`.
-
 ## Installation:
-1. [download PJSUA.tar.gz](https://www.pjsip.org/download.htm)
-2. unpack the file: `tar -xzvf pjproject-<version>.tar.gz`
-3. switch to the folder `cd pjproject-<version>`
-4. run configure script: `./configure`
-5. build project: `make dep && make clean && make && make install`
-6. choose a directory, listed by `echo $PATH` (from now on called PATHDIR)
-7. add symbolic link in PATHDIR to pjsua-binary: `ln -s /<absolute path to unpacked pjsua>/pjsip-apps/bin/pjsua-x86_64-unknown-linux-gnu <PATHDIR>/pjsua`<br>
+1. The following packages must be installed: `sudo apt install python-dev gcc make gcc binutils build-essential libasound2-dev`
+2. [download PJSUA.tar.gz](https://www.pjsip.org/download.htm)
+3. unpack the file: `tar -xzvf pjproject-<version>.tar.gz`
+4. switch to the folder `cd pjproject-<version>`
+5. run configure script: `./configure`
+6. build project: `make dep && make clean && make && make install`
+7. choose a directory, listed by `echo $PATH` (from now on called PATHDIR)
+8. add symbolic link in PATHDIR to pjsua-binary: `ln -s /<absolute path to unpacked pjsua>/pjsip-apps/bin/pjsua-x86_64-unknown-linux-gnu <PATHDIR>/pjsua`<br>
 **Attention: Relative paths do not work here! && Caution Mac User: The file is named differently, so path could look like this: <br> `/<absolute path to unpacked pjsua>/pjsip-apps/bin/pjsua-x86_64-apple-darwin20.4.0`**
-8. PJSUA can now be used everywhere: `pjsua`
+9. PJSUA can now be used everywhere: `pjsua`
 
 ## Accept call automatically & initiate via REST API
 1. Get data: We need SIP ID, SIP password and registrar. <br>
