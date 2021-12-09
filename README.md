@@ -1,7 +1,5 @@
 # auto-answer-click2dial
-
-## In this example
-This tutorial shows how to automatically answer calls initiated by sipgate.io using pjsua
+This tutorial shows how to automatically answer calls initiated by sipgate.io using [pjsua](https://www.pjsip.org/pjsua.htm).
 
 ## Installation:
 1. The following packages must be installed:<br>
