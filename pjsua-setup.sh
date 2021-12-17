@@ -43,7 +43,7 @@ EOF
 
 else 
 
-gnome-terminal --bash -c './pjsua-* --registrar=sip:sipgate.de --id=sip:${SIPID}@sipgate.de --realm="*" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200'
+gnome-terminal -- bash -c './pjsua-* --registrar=sip:sipgate.de --id=sip:${SIPID}@sipgate.de --realm="*" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200'
 
 fi 
 
