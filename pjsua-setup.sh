@@ -28,7 +28,24 @@ echo "pjsua is already installed"
 fi
 cd pjsua-unpacked
 cd pjsip-apps/bin
-gnome-terminal  -- bash -c './pjsua-* --registrar=sip:sipgate.de --id=sip:${SIPID}@sipgate.de --realm="*" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200'
+
+if [[ $OSTYPE == 'darwin'* ]]; then
+
+    export CURRENTDIR=$(pwd)
+    osascript <<EOF
+
+        tell application "Terminal"
+            do script ("cd $CURRENTDIR") in Window 1
+            do script ("./pjsua-* --registrar=sip:sipgate.de --id=sip:$SIPID@sipgate.de --realm=\"*\" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200") in Window 1
+        end tell
+
+EOF
+
+else 
+
+gnome-terminal --bash -c './pjsua-* --registrar=sip:sipgate.de --id=sip:${SIPID}@sipgate.de --realm="*" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200'
+
+fi 
 
 # Initiate Call via Post Request
 curl --location --request POST 'https://api.sipgate.com/v2/sessions/calls' \
