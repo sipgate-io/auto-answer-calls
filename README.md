@@ -9,7 +9,7 @@ This tutorial shows how to automatically answer calls initiated by sipgate.io us
 3. Get data: We need the `SIP-ID` and `SIP-password`. <br>
 3.1 In the [visual routing](https://app.sipgate.com/routing) you can select a device at the top and find the data there.<br>
 4. (Optional) If you want to test the automatical pickup right away, you will need some more data to make the right API call:<br>
-4.1 `TOKENID` and `TOKEN` can be created following [these instructions](https://www.sipgate.io/rest-api/authentication)<br>
+4.1 `TOKENID` and `TOKEN` can be created with the scope `sessions:calls:write` following [these instructions](https://www.sipgate.io/rest-api/authentication)<br>
 4.2 The `DEVICEEXTENSION` is the suffix of the `SIP-ID` including the letter (eg: `e12`)<br>
 4.3 The `CALLEE` is the number you want to call (eg: `+49211123456789`) <br>
 4.4 The `CALLERID` is the number shown on the callees display
