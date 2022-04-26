@@ -25,8 +25,8 @@ cd pjsua-unpacked
 make dep && make clean && make
 else
 echo "pjsua is already installed"
-fi
 cd pjsua-unpacked
+fi
 cd pjsip-apps/bin
 
 if [[ $OSTYPE == 'darwin'* ]]; then
@@ -41,11 +41,11 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 
 EOF
 
-else 
+else
 
 gnome-terminal -- bash -c './pjsua-* --registrar=sip:sipgate.de --id=sip:${SIPID}@sipgate.de --realm="*" --username=$SIPID --password=$SIPPASSWORD --auto-answer=200'
 
-fi 
+fi
 
 # Initiate Call via Post Request
 curl --location --request POST 'https://api.sipgate.com/v2/sessions/calls' \

@@ -4,7 +4,8 @@ This tutorial shows how to automatically answer calls initiated by sipgate.io us
 
 ## Automatic installation and test (using a bash script)
 1. The following packages must be installed:<br>
-`sudo apt install python-dev gcc make gcc binutils build-essential libasound2-dev`
+Linux: `sudo apt install python-dev gcc make gcc binutils build-essential libasound2-dev` <br>
+Mac: `brew install python3 gcc make binutils wget`
 2. Clone/download this repository
 3. Get data: We need the `SIP-ID` and `SIP-password`. <br>
 3.1 In the [visual routing](https://app.sipgate.com/routing) you can select a device at the top and find the data there.<br>
@@ -21,8 +22,10 @@ The first time this script is executed it will download, build and setup pjsua a
 ## Manual installation 
 ### Installation:
 1. the following packages must be installed:<br>
-`sudo apt install python-dev gcc make gcc binutils build-essential libasound2-dev`
-2. [download pjproject.tar.gz](https://www.pjsip.org/download.htm)
+Linux `sudo apt install python-dev gcc make gcc binutils build-essential libasound2-dev`<br>
+Mac: `brew install python3 gcc make binutils wget`
+2. [download pjproject.tar.gz](https://www.pjsip.org/download.htm) <br>
+`wget https://github.com/pjsip/pjproject/archive/2.11.1.tar.gz -O pjsua-archive.tar.gz`
 3. unpack the file: `tar -xzvf pjproject-<version>.tar.gz`
 4. switch to the folder `cd pjproject-<version>`
 5. run configure script: `./configure`
